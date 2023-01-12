@@ -1,0 +1,458 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ZachsHubFreeVersion = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Credits = Instance.new("TextButton")
+local Version = Instance.new("TextLabel")
+local Buy = Instance.new("TextButton")
+local MadeBy = Instance.new("TextLabel")
+local Dupe = Instance.new("TextButton")
+local Title = Instance.new("TextLabel")
+local CreditsFrame = Instance.new("Frame")
+local CreditsText = Instance.new("TextLabel")
+local OwnerCredits = Instance.new("TextLabel")
+local BuyFrame = Instance.new("Frame")
+local Glitch = Instance.new("TextButton")
+local Rbpopit = Instance.new("TextButton")
+local Banana = Instance.new("TextButton")
+local DupeFrame = Instance.new("Frame")
+local Player = Instance.new("TextButton")
+local PlayerFrame = Instance.new("Frame")
+local Fly = Instance.new("TextButton")
+local Home = Instance.new("TextButton")
+local HomeFrame = Instance.new("Frame")
+local MadeByHome = Instance.new("TextLabel")
+local DiscordLink = Instance.new("TextLabel")
+local UpdateLog = Instance.new("TextLabel")
+local UpdateLog1 = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+--Properties:
+
+ZachsHubFreeVersion.Name = "Zach's Hub | Free Version"
+ZachsHubFreeVersion.Parent = game.CoreGui
+ZachsHubFreeVersion.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = ZachsHubFreeVersion
+Main.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+Main.Position = UDim2.new(0.113577023, 0, 0.225146204, 0)
+Main.Size = UDim2.new(0, 552, 0, 344)
+Main.Active = true
+Main.Draggable = true
+
+UICorner.CornerRadius = UDim.new(0, 6)
+UICorner.Parent = Main
+
+Credits.Name = "Credits"
+Credits.Parent = Main
+Credits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Credits.BackgroundTransparency = 1.000
+Credits.Position = UDim2.new(0, 0, 0.860465109, 0)
+Credits.Size = UDim2.new(0, 94, 0, 22)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+Credits.MouseButton1Click:Connect(function()
+	CreditsFrame.Visible = true
+	BuyFrame.Visible = false
+	DupeFrame.Visible = false
+	PlayerFrame.Visible = false
+	HomeFrame.Visible = false
+end)
+
+Version.Name = "Version"
+Version.Parent = Main
+Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Version.BackgroundTransparency = 1.000
+Version.Position = UDim2.new(0, 0, 0.950581372, 0)
+Version.Size = UDim2.new(0, 82, 0, 17)
+Version.Font = Enum.Font.SourceSansBold
+Version.Text = "Version: 1.0.0"
+Version.TextColor3 = Color3.fromRGB(0, 0, 0)
+Version.TextSize = 14.000
+
+Buy.Name = "Buy"
+Buy.Parent = Main
+Buy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Buy.BackgroundTransparency = 1.000
+Buy.Position = UDim2.new(0, 0, 0.79651165, 0)
+Buy.Size = UDim2.new(0, 94, 0, 22)
+Buy.Font = Enum.Font.SourceSans
+Buy.Text = "Buy"
+Buy.TextColor3 = Color3.fromRGB(0, 0, 0)
+Buy.TextScaled = true
+Buy.TextSize = 14.000
+Buy.TextWrapped = true
+Buy.MouseButton1Click:Connect(function()
+	BuyFrame.Visible = true
+	CreditsFrame.Visible = true
+	DupeFrame.Visible = false
+	PlayerFrame.Visible = false
+	HomeFrame.Visible = false
+end)
+
+MadeBy.Name = "MadeBy"
+MadeBy.Parent = Main
+MadeBy.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MadeBy.BackgroundTransparency = 1.000
+MadeBy.Position = UDim2.new(0.818840504, 0, 0.950581372, 0)
+MadeBy.Size = UDim2.new(0, 82, 0, 17)
+MadeBy.Font = Enum.Font.SourceSansBold
+MadeBy.Text = "Made By: ZachTheDev"
+MadeBy.TextColor3 = Color3.fromRGB(0, 0, 0)
+MadeBy.TextSize = 14.000
+
+Dupe.Name = "Dupe"
+Dupe.Parent = Main
+Dupe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Dupe.BackgroundTransparency = 1.000
+Dupe.Position = UDim2.new(0, 0, 0.732558131, 0)
+Dupe.Size = UDim2.new(0, 94, 0, 22)
+Dupe.Font = Enum.Font.SourceSans
+Dupe.Text = "Dupe"
+Dupe.TextColor3 = Color3.fromRGB(0, 0, 0)
+Dupe.TextScaled = true
+Dupe.TextSize = 14.000
+Dupe.TextWrapped = true
+Dupe.MouseButton1Click:Connect(function()
+	DupeFrame.Visible = true
+	CreditsFrame.Visible = true
+	BuyFrame.Visible = false
+	PlayerFrame.Visible = false
+	HomeFrame.Visible = false
+end)
+
+Title.Name = "Title"
+Title.Parent = Main
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.Size = UDim2.new(0, 102, 0, 24)
+Title.Font = Enum.Font.SourceSansBold
+Title.Text = "Zach's Hub | Free"
+Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+CreditsFrame.Name = "CreditsFrame"
+CreditsFrame.Parent = Main
+CreditsFrame.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+CreditsFrame.Position = UDim2.new(0.184782609, 0, 0, 0)
+CreditsFrame.Size = UDim2.new(0, 450, 0, 344)
+CreditsFrame.Visible = false
+
+CreditsText.Name = "CreditsText"
+CreditsText.Parent = CreditsFrame
+CreditsText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CreditsText.BackgroundTransparency = 1.000
+CreditsText.Position = UDim2.new(0.286666662, 0, 0, 0)
+CreditsText.Size = UDim2.new(0, 191, 0, 26)
+CreditsText.Font = Enum.Font.SourceSans
+CreditsText.Text = "Credits:"
+CreditsText.TextColor3 = Color3.fromRGB(0, 0, 0)
+CreditsText.TextScaled = true
+CreditsText.TextSize = 14.000
+CreditsText.TextWrapped = true
+
+OwnerCredits.Name = "OwnerCredits"
+OwnerCredits.Parent = CreditsFrame
+OwnerCredits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OwnerCredits.BackgroundTransparency = 1.000
+OwnerCredits.Position = UDim2.new(0.286666662, 0, 0.127906978, 0)
+OwnerCredits.Size = UDim2.new(0, 191, 0, 26)
+OwnerCredits.Font = Enum.Font.SourceSans
+OwnerCredits.Text = "ZachTheDev: Owner"
+OwnerCredits.TextColor3 = Color3.fromRGB(0, 0, 0)
+OwnerCredits.TextScaled = true
+OwnerCredits.TextSize = 14.000
+OwnerCredits.TextWrapped = true
+
+BuyFrame.Name = "BuyFrame"
+BuyFrame.Parent = Main
+BuyFrame.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+BuyFrame.Position = UDim2.new(0.184782609, 0, 0, 0)
+BuyFrame.Size = UDim2.new(0, 450, 0, 344)
+BuyFrame.Visible = false
+
+Glitch.Name = "Glitch"
+Glitch.Parent = BuyFrame
+Glitch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Glitch.BackgroundTransparency = 1.000
+Glitch.Position = UDim2.new(0.0511111803, 0, 0.130813912, 0)
+Glitch.Size = UDim2.new(0, 120, 0, 30)
+Glitch.Font = Enum.Font.SourceSans
+Glitch.Text = "Glitch"
+Glitch.TextColor3 = Color3.fromRGB(0, 0, 0)
+Glitch.TextScaled = true
+Glitch.TextSize = 14.000
+Glitch.TextWrapped = true
+Glitch.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Glitch")
+end)
+
+Rbpopit.Name = "Rb pop it"
+Rbpopit.Parent = BuyFrame
+Rbpopit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Rbpopit.BackgroundTransparency = 1.000
+Rbpopit.Position = UDim2.new(0.337777764, 0, 0.130813912, 0)
+Rbpopit.Size = UDim2.new(0, 120, 0, 30)
+Rbpopit.Font = Enum.Font.SourceSans
+Rbpopit.Text = "Rb Pop It"
+Rbpopit.TextColor3 = Color3.fromRGB(0, 0, 0)
+Rbpopit.TextScaled = true
+Rbpopit.TextSize = 14.000
+Rbpopit.TextWrapped = true
+Rbpopit.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("Pop It Rainbow!")
+end)
+
+Banana.Name = "Banana"
+Banana.Parent = BuyFrame
+Banana.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Banana.BackgroundTransparency = 1.000
+Banana.Position = UDim2.new(0.655555546, 0, 0.130813912, 0)
+Banana.Size = UDim2.new(0, 120, 0, 30)
+Banana.Font = Enum.Font.SourceSans
+Banana.Text = "Banana"
+Banana.TextColor3 = Color3.fromRGB(0, 0, 0)
+Banana.TextScaled = true
+Banana.TextSize = 14.000
+Banana.TextWrapped = true
+Banana.MouseButton1Click:Connect(function()
+	game:GetService("ReplicatedStorage").RemoteEvents.BuyItemCash:FireServer("The Banana")
+end)
+
+DupeFrame.Name = "DupeFrame"
+DupeFrame.Parent = Main
+DupeFrame.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+DupeFrame.Position = UDim2.new(0.184782609, 0, 0, 0)
+DupeFrame.Size = UDim2.new(0, 450, 0, 344)
+DupeFrame.Visible = false
+
+Player.Name = "Player"
+Player.Parent = Main
+Player.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Player.BackgroundTransparency = 1.000
+Player.Position = UDim2.new(0, 0, 0.668604612, 0)
+Player.Size = UDim2.new(0, 94, 0, 22)
+Player.Font = Enum.Font.SourceSans
+Player.Text = "Player"
+Player.TextColor3 = Color3.fromRGB(0, 0, 0)
+Player.TextScaled = true
+Player.TextSize = 14.000
+Player.TextWrapped = true
+Player.MouseButton1Click:Connect(function()
+	PlayerFrame.Visible = true
+	CreditsFrame.Visible = true
+	BuyFrame.Visible = false
+	DupeFrame.Visible = false
+	HomeFrame.Visible = false
+end)
+
+PlayerFrame.Name = "PlayerFrame"
+PlayerFrame.Parent = Main
+PlayerFrame.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+PlayerFrame.Position = UDim2.new(0.184782609, 0, 0, 0)
+PlayerFrame.Size = UDim2.new(0, 450, 0, 344)
+PlayerFrame.Visible = false
+
+Fly.Name = "Fly"
+Fly.Parent = PlayerFrame
+Fly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Fly.BackgroundTransparency = 1.000
+Fly.Position = UDim2.new(0.0377777778, 0, 0.0697674453, 0)
+Fly.Size = UDim2.new(0, 60, 0, 20)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(0, 0, 0)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+Fly.MouseButton1Click:Connect(function()
+	repeat wait()
+	until game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:findFirstChild("Torso") and game.Players.LocalPlayer.Character:findFirstChild("Humanoid")
+	local mouse = game.Players.LocalPlayer:GetMouse()
+	repeat wait() until mouse
+	local plr = game.Players.LocalPlayer
+	local torso = plr.Character.Torso
+	local flying = true
+	local deb = true
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}
+	local maxspeed = 50
+	local speed = 0
+
+	function Fly()
+		local bg = Instance.new("BodyGyro", torso)
+		bg.P = 9e4
+		bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)
+		bg.cframe = torso.CFrame
+		local bv = Instance.new("BodyVelocity", torso)
+		bv.velocity = Vector3.new(0,0.1,0)
+		bv.maxForce = Vector3.new(9e9, 9e9, 9e9)
+		repeat wait()
+			plr.Character.Humanoid.PlatformStand = true
+			if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then
+				speed = speed+.5+(speed/maxspeed)
+				if speed > maxspeed then
+					speed = maxspeed
+				end
+			elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then
+				speed = speed-1
+				if speed < 0 then
+					speed = 0
+				end
+			end
+			if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+				lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}
+			elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then
+				bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed
+			else
+				bv.velocity = Vector3.new(0,0.1,0)
+			end
+			bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)
+		until not flying
+		ctrl = {f = 0, b = 0, l = 0, r = 0}
+		lastctrl = {f = 0, b = 0, l = 0, r = 0}
+		speed = 0
+		bg:Destroy()
+		bv:Destroy()
+		plr.Character.Humanoid.PlatformStand = false
+	end
+	mouse.KeyDown:connect(function(key)
+		if key:lower() == "e" then
+			if flying then flying = false
+			else
+				flying = true
+				Fly()
+			end
+		elseif key:lower() == "w" then
+			ctrl.f = 1
+		elseif key:lower() == "s" then
+			ctrl.b = -1
+		elseif key:lower() == "a" then
+			ctrl.l = -1
+		elseif key:lower() == "d" then
+			ctrl.r = 1
+		end
+	end)
+	mouse.KeyUp:connect(function(key)
+		if key:lower() == "w" then
+			ctrl.f = 0
+		elseif key:lower() == "s" then
+			ctrl.b = 0
+		elseif key:lower() == "a" then
+			ctrl.l = 0
+		elseif key:lower() == "d" then
+			ctrl.r = 0
+		end
+	end)
+	Fly()
+
+end)
+
+
+Home.Name = "Home"
+Home.Parent = Main
+Home.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Home.BackgroundTransparency = 1.000
+Home.Position = UDim2.new(0, 0, 0.130813897, 0)
+Home.Size = UDim2.new(0, 94, 0, 22)
+Home.Font = Enum.Font.SourceSans
+Home.Text = "Home"
+Home.TextColor3 = Color3.fromRGB(0, 0, 0)
+Home.TextScaled = true
+Home.TextSize = 14.000
+Home.TextWrapped = true
+Home.MouseButton1Click:Connect(function()
+	HomeFrame.Visible = true
+	CreditsFrame.Visible = true
+	BuyFrame.Visible = false
+	DupeFrame.Visible = false
+	PlayerFrame.Visible = false
+end)
+
+HomeFrame.Name = "HomeFrame"
+HomeFrame.Parent = Main
+HomeFrame.BackgroundColor3 = Color3.fromRGB(99, 99, 99)
+HomeFrame.Position = UDim2.new(0.184782609, 0, 0, 0)
+HomeFrame.Size = UDim2.new(0, 450, 0, 344)
+HomeFrame.Visible = false
+
+MadeByHome.Name = "MadeByHome"
+MadeByHome.Parent = HomeFrame
+MadeByHome.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MadeByHome.BackgroundTransparency = 1.000
+MadeByHome.Position = UDim2.new(0.776618302, 0, 0.950581372, 0)
+MadeByHome.Size = UDim2.new(0, 82, 0, 17)
+MadeByHome.Font = Enum.Font.SourceSansBold
+MadeByHome.Text = "Made By: ZachTheDev"
+MadeByHome.TextColor3 = Color3.fromRGB(0, 0, 0)
+MadeByHome.TextSize = 14.000
+
+DiscordLink.Name = "DiscordLink"
+DiscordLink.Parent = HomeFrame
+DiscordLink.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DiscordLink.BackgroundTransparency = 1.000
+DiscordLink.Position = UDim2.new(0.222222224, 0, 0.127906978, 0)
+DiscordLink.Size = UDim2.new(0, 259, 0, 30)
+DiscordLink.Font = Enum.Font.SourceSans
+DiscordLink.Text = "Discord Link: discord.gg/GEHqJatujB"
+DiscordLink.TextColor3 = Color3.fromRGB(0, 0, 0)
+DiscordLink.TextScaled = true
+DiscordLink.TextSize = 14.000
+DiscordLink.TextWrapped = true
+
+UpdateLog.Name = "UpdateLog"
+UpdateLog.Parent = HomeFrame
+UpdateLog.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateLog.BackgroundTransparency = 1.000
+UpdateLog.Position = UDim2.new(0.222222224, 0, 0.215116277, 0)
+UpdateLog.Size = UDim2.new(0, 259, 0, 30)
+UpdateLog.Font = Enum.Font.SourceSans
+UpdateLog.Text = "Update log:"
+UpdateLog.TextColor3 = Color3.fromRGB(0, 0, 0)
+UpdateLog.TextScaled = true
+UpdateLog.TextSize = 14.000
+UpdateLog.TextWrapped = true
+
+UpdateLog1.Name = "UpdateLog1"
+UpdateLog1.Parent = HomeFrame
+UpdateLog1.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UpdateLog1.BackgroundTransparency = 1.000
+UpdateLog1.Position = UDim2.new(0.222222224, 0, 0.302325577, 0)
+UpdateLog1.Size = UDim2.new(0, 259, 0, 30)
+UpdateLog1.Font = Enum.Font.SourceSans
+UpdateLog1.Text = "Script Released: 1/12/22"
+UpdateLog1.TextColor3 = Color3.fromRGB(0, 0, 0)
+UpdateLog1.TextScaled = true
+UpdateLog1.TextSize = 14.000
+UpdateLog1.TextWrapped = true
+
+Close.Name = "Close"
+Close.Parent = Main
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.Position = UDim2.new(0.949275374, 0, 0, 0)
+Close.Size = UDim2.new(0, 28, 0, 18)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 18.000
+Close.TextWrapped = true
+Close.MouseButton1Click:Connect(function()
+	Main.Visible = false
+end)
+
+UICorner_2.CornerRadius = UDim.new(0, 6)
+UICorner_2.Parent = Close
